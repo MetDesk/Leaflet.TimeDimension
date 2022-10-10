@@ -30,8 +30,10 @@
     "url": "git://github.com/socib/Leaflet.TimeDimension.git"
   },
   "dependencies": {
-    "iso8601-js-period": "^0.2.1",
-    "leaflet": "1.8.0"
+    "iso8601-js-period": "^0.2.1"
+  },
+  "peerDependencies": {
+    "leaflet": "^1.8.0"
   },
   "devDependencies": {
     "grunt": "~1",
