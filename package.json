@@ -1,7 +1,14 @@
 {
-  "name": "leaflet-timedimension",
-  "version": "1.1.1",
+  "name": "@metdesk/leaflet-timedimension",
+  "version": "0.0.0",
   "description": "Add time dimension capabilities on a Leaflet map",
+  "scripts": {
+    "esbuild": "rm -rf ./dist && node build.mjs",
+    "build:test": "set NODE_ENV=test && pnpm esbuild",
+    "build": "set NODE_ENV=production && pnpm esbuild",
+    "clean": "rm -rf dist",
+    "nuke": "rm -rf .turbo && rm -rf node_modules"
+  },
   "keywords": [
     "gis",
     "map",
@@ -36,14 +43,7 @@
     "leaflet": "^1.8.0"
   },
   "devDependencies": {
-    "grunt": "~1",
-    "grunt-contrib-clean": "~0.7.0",
-    "grunt-contrib-concat": "~1",
-    "grunt-contrib-cssmin": "~2.2",
-    "grunt-contrib-jshint": "~1.1",
-    "grunt-contrib-uglify": "~3.1.0",
-    "grunt-contrib-watch": "~1",
-    "grunt-remove-logging": "~0.2.0"
+    "esbuild": "^0.17.18"
   },
   "main": "dist/leaflet.timedimension.src.js",
   "style": "dist/leaflet.timedimension.control.css"
